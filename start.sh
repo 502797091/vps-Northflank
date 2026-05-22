@@ -19,7 +19,7 @@ else
     # 4. 在日志中直出经过隧道加速的 WS 节点链接
     if [ -n "$ARGO_DOMAIN" ] && [ -n "$UUID" ]; then
         echo "=================================================================="
-        echo "🎉 容器部署成功！已成功将隧道提速聚焦于 WS 协议节点："
+        echo "🎉 容器部署成功！YouTube 科技共享 恭喜您 已成功将隧道提速聚焦于 WS 协议节点："
         echo "=================================================================="
         echo "【CF 隧道加速 - WS 节点链接】 (请直接复制下方链接):"
         echo "vless://${UUID}@${ARGO_DOMAIN}:443?encryption=none&security=tls&type=ws&path=%2Fvless-ws#NF-Argo-WS"
