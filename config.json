@@ -1,0 +1,51 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "type": "vless",
+      "tag": "vless-ws-in",
+      "listen": "::",
+      "listen_port": 8080,
+      "users": [
+        {
+          "uuid": "your-uuid-here",
+          "flow": ""
+        }
+      ],
+      "transport": {
+        "type": "ws",
+        "path": "/vless-ws"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-grpc-in",
+      "listen": "::",
+      "listen_port": 8081,
+      "users": [
+        {
+          "uuid": "your-uuid-here",
+          "flow": ""
+        }
+      ],
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc"
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}
